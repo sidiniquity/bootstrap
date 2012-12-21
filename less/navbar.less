@@ -20,12 +20,16 @@
 // Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
   min-height: @navbarHeight;
+  height: 200px;
+  width: 300px;
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
-  border: 1px solid @navbarBorder;
-  .border-radius(@baseBorderRadius);
-  .box-shadow(0 1px 4px rgba(0,0,0,.065));
+  background-image: url('../img/splat.jpg');
+  // #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  // border: 1px solid @navbarBorder;
+  // .border-radius(@baseBorderRadius);
+  // .box-shadow(0 1px 4px rgba(0,0,0,.065));
+
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -50,7 +54,8 @@
   float: left;
   display: block;
   // Vertically center the text given @navbarHeight
-  padding: ((@navbarHeight - @baseLineHeight) / 2) 20px ((@navbarHeight - @baseLineHeight) / 2);
+  // padding: ((@navbarHeight - @baseLineHeight) / 2) 20px ((@navbarHeight - @baseLineHeight) / 2);
+  padding: 90px 80px 90px;
   margin-left: -20px; // negative indent to left-align the text down the page
   font-size: 20px;
   font-weight: 200;
@@ -236,10 +241,11 @@
 
 // Links
 .navbar .nav > li > a {
-  float: none;
+  float: right;
   // Vertically center the text given @navbarHeight
   padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
-  color: @navbarLinkColor;
+  // color: @navbarLinkColor;
+  color: @black;
   text-decoration: none;
   text-shadow: 0 1px 0 @navbarBackgroundHighlight;
 }
